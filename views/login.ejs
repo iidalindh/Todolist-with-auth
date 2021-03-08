@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<html lang="en"></html>
+  <title>Todo App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b22cc2033a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/"><img src="../static/images/todolist-logo.png" alt="" width="150"></a>
+    </div>
+  </nav>
+  <div class="login-container">
+  <form action="/login" method="post" class="login-form">
+    <h1>SIGN IN</h1>
+    <% if(err) { %>
+      <div class="err-message"><%= err %></div>
+      <% } %>
+    <p>New user? <a href="/register">Sign up!</a></p>
+    <input type="email" name="email" placeholder="example@domain.com" />
+    <input type="password" name="password" placeholder="Password" />
+    <a href="/reset">Forgot password?</a>
+    <button type="submit">SIGN IN</button>
+  </form>
+</div>
+</body>
+</html>
